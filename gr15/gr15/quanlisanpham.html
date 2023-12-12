@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="css/style-admin.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <img src="" alt="">
+                        </span>       
+                    </a>
+                </li>
+                <li>
+                    <a href="admin.html">
+                        <span class="icon">
+                            <ion-icon name="storefront-outline"></ion-icon>
+                        </span>
+                       
+                        <h3 class="title" >Home Page</h3>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Customer.html">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <h3 class="title">Customer</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="shirt-outline"></ion-icon>
+                        </span>
+                        <h3 class="title">Product Management</h3>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="quanlidonhang.html">
+                        <span class="icon">
+                            <ion-icon name="cart-outline"></ion-icon>
+                        </span>
+                        <h3 class="title">Order management</h3>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="quanlitaikhoan.html">
+                        <span class="icon">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                        </span>
+                        <h3 class="title">Account management</h3>
+                    </a>
+                </li>   
+
+                <li>
+                    <a href="thongke.html">
+                        <span class="icon">
+                            <ion-icon name="trending-up-outline"></ion-icon>
+                        </span>
+                        <h3 class="title">Statistical</h3>
+                    </a>
+                </li>
+                
+            </ul>
+           
+           
+        </div>
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>     
+                <div class="user">
+                    <img src="img/admin.jpg" alt="">
+                </div> 
+            </div>
+
+            <!-- ================ Order Details List ================= -->
+            <div class="details">
+                <div class="recentOrders2">
+                    <div class="cardHeader">
+                        <h2>Products</h2>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td><h3>Product Name</h3></td>
+                                <td><h3>Date Submited</h3></td>
+                                <td><h3>Date Updated</h3></td>
+                                <td><h3>Administrator action</h3></td>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            
+                            <tr>
+                                <td><h5>Air Jordan 1 Zoom CMFT 2</h5></td>
+                                <td><h5>24/10/2023</h5></td>
+                                <td><h5>30/11/2023</h5></td>
+                                <td>
+                                    <a style="text-decoration: none;"><button class="edit" type="button"id="myBtn1" > Edit</button></a>
+                                    <button class="status1 inProgress" type="button" onclick="alert('Are you sure you want to delete this product?'); alert('Delete success')"><span>Delete</span></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><h5>Air Force 1 '07 Pro Tech</h5></td>
+                                <td><h5>04/10/2023</h5></td>
+                                <td><h5>25/11/2023</h5></td>
+                                <td>
+                                    <a style="text-decoration: none;" ><button class="edit" type="button" id="myBtn2"> Edit</button></a>
+                                    <button class="status1 inProgress" type="button" onclick="alert('Are you sure you want to delete this product?'); alert('Delete success')"><span>Delete</span></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><h5>Air Force 1 '07 EasyOn</h5></td>
+                                <td><h5>6/10/2023</h5></td>
+                                <td><h5>25/11/2023</h5></td>
+                                <td>
+                                    <a style="text-decoration: none;" ><button class="edit" type="button" id="myBtn3"> Edit</button></a>
+                                    <button class="status1 inProgress" type="button" onclick="alert('Are you sure you want to delete this product?'); alert('Delete success')"><span>Delete</span></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="Add">
+                        <tr>
+                            <a style="text-align: left;" id="myBtn"><button  class="add" type="button"  > <span style="font-size: large;">Add Product</span></button></a>
+                        </tr>
+                    </div>
+                </div>
+            </div>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <div class="container-modal">
+                    <div class="add-page">
+                        <div class="add-product">
+                            <h2>Add Product</h2>
+                            <form action="">
+                                <div class="dotgrid">
+                                    <div class="wrapper">
+                                        <div class="wrap">
+                                            <label>Product Name </label>
+                                            <input type="text" placeholder="Product Name">
+                                        </div>
+                                        <div class="wrap">
+                                            <label>ID Product </label>
+                                            <input type="text" placeholder="ID Product " style="margin-left: 40px;">
+                                        </div>
+                                        <div class="wrap">
+                                            <label >Category</label>
+                                            <select  style="margin-left: 54px;font-size: 20px;">
+                                                <option value="1">Air Force</option>
+                                                <option value="2">Basketball</option>
+                                                <option value="3" selected="selected">Jordan</option>
+                                                <option value="4">Others</option>
+                                            </select>
+                                        </div>
+                                        <div class="wrap">
+                                            <label >Shoes Top</label>
+                                            <select style="margin-left: 41px;font-size: 20px;" >
+                                                <option value="1">High Top</option>
+                                                <option value="2">Mid Top</option>
+                                                <option value="3" selected="selected">Low Top</option>
+                                            </select>
+                                        </div>
+                                        <div class="wrap">
+                                            <label>Cost</label>
+                                            <input type="text" placeholder="Cost" style="margin-left: 95px;">
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <div class="add-btn">
+                                    <button onclick="alert(' Success')" style="text-align: center;width: 200px;font-size: 25px;font-weight: 600; color: #f1f2f6;background-color:#212121;border-radius: 5px;">Add Product</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="checkout-products has-bg">
+                            <div class="order-summary">
+                                <div class="wrapper">
+                                    <h2>Product Details:</h2>
+                                    <div class="product-list">
+                                        <ul>
+                                            <textarea rows="10" cols="54"  placeholder="Product Details" style="max-width: 400px;max-height: 100px;"></textarea>
+                                            
+                                        </ul>
+                                        <div class="add-img" style="margin-top: 20px; max-width: 300px; max-height: 200px;">
+                                            <input type="file" accept="image/*" id="themsanphamkhungcon2" onchange="displayImage(this)" required >  
+                                            <img id="previewImage" src="#" alt="Image here" style="width: 200px; height: 200px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div id="myModal1" class="modal1">
+                <div class="modal-content">
+                  <span class="close1">&times;</span>
+                  <div class="container-modal">
+            
+                    <div class="add-page">
+                        <div class="add-product">
+                            <h2>Edit Product</h2>
+                            <form action="">
+                                <div class="dotgrid">
+                                    <div class="wrapper">
+                                        <div class="wrap">
+                                            <label>Product Name</label>
+                                            <input type="text" placeholder="Air Jordan 1 Zoom CMFT 2">
+                                        </div>
+                                        <div class="wrap">
+                                            <label>ID Product </label>
+                                            <input type="text" placeholder="15072004 " style="margin-left: 40px;">
+                                        </div>
+                                        <div class="wrap">
+                                            <label >Category</label>
+                                            <select  style="margin-left: 54px;font-size: 20px;">
+                                                <option value="1">Air Force</option>
+                                                <option value="2">Basketball</option>
+                                                <option value="3" selected="selected">Jordan</option>
+                                                <option value="4">Others</option>
+                                            </select>
+                                        </div>
+                                        <div class="wrap">
+                                            <label >Shoes Top</label>
+                                            <select style="margin-left: 41px;font-size: 20px;" >
+                                                <option value="1">High Top</option>
+                                                <option value="2"selected="selected">Mid Top</option>
+                                                <option value="3">Low Top</option>
+                                            </select>
+                                        </div>
+                                        <div class="wrap">
+                                            <label>Cost</label>
+                                            <input type="text" placeholder="$192.50" style="margin-left: 95px;">
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <div class="add-btn">
+                                    <button onclick="alert('Save Success')" style="text-align: center;width: 200px;font-size: 25px;font-weight: 600; color: #f1f2f6;background-color:#212121;border-radius: 5px;">Save</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="checkout-products has-bg">
+                            <div class="order-summary">
+                                <div class="wrapper">
+                                    <h2>Product Details:</h2>
+                                    <div class="product-list">
+                                        <ul>
+                                            <textarea rows="10" cols="54"  placeholder="Product Details" style="max-width: 400px;max-height: 100px;">Premium suede and Jordan Brand's signature Formula 23 foam come together to give you an extra luxurious (and extra cosy) AJ1. You don't need to play "either or" when it comes to choosing style or comfort with this one—which is nice, 'cause you deserve both.</textarea>
+                                            
+                                        </ul>
+                                        <div class="add-img" style="margin-top: 20px; max-width: 300px; max-height: 200px;">
+                                            <input type="file" accept="image/*" id="themsanphamkhungcon2" onchange="displayImage1(this)" required >  
+                                            <img id="previewImage1" src="product-detail/jordan/air-jordan-1-zoom-cmft-2.png" alt="Image here" style="width: 200px; height: 200px;">
+                                        </div>
+                                        <br>
+                                        <div id="delBtn">
+                                            <button class="" type="button" onclick="deleteImg('delBtn','previewImage1')"style="width: 70px;">Delete</button>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div id="myModal2" class="modal2">
+                <div class="modal-content">
+                  <span class="close2">&times;</span>
+                  <div class="container-modal">
+                    <div class="add-page">
+                        <div class="add-product">
+                            <h2>Edit Product</h2>
+                            <form action="">
+                                <div class="dotgrid">
+                                    <div class="wrapper">
+                                        <div class="wrap">
+                                            <label>Product Name </label>
+                                            <input type="text" placeholder="Air Force 1 '07 Pro Tech">
+                                        </div>
+                                        <div class="wrap">
+                                            <label>ID Product </label>
+                                            <input type="text" placeholder="1423213" style="margin-left: 40px;">
+                                        </div>
+                                        <div class="wrap">
+                                            <label >Category</label>
+                                            <select  style="margin-left: 54px;font-size: 20px;">
+                                                <option value="1"selected="selected">Air Force</option>
+                                                <option value="2">Basketball</option>
+                                                <option value="3" >Jordan</option>
+                                                <option value="4">Others</option>
+                                            </select>
+                                        </div>
+                                        <div class="wrap">
+                                            <label >Shoes Top</label>
+                                            <select style="margin-left: 41px;font-size: 20px;" >
+                                                <option value="1">High Top</option>
+                                                <option value="2">Mid Top</option>
+                                                <option value="3" selected="selected">Low Top</option>
+                                            </select>
+                                        </div>
+                                        <div class="wrap">
+                                            <label>Cost</label>
+                                            <input type="text" placeholder="$292.50" style="margin-left: 95px;">
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <div class="add-btn">
+                                    <button onclick="alert('Save Success')" style="text-align: center;width: 200px;font-size: 25px;font-weight: 600; color: #f1f2f6;background-color:#212121;border-radius: 5px;">Save</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="checkout-products has-bg">
+                            <div class="order-summary">
+                                <div class="wrapper">
+                                    <h2>Product Details:</h2>
+                                    <div class="product-list">
+                                        <ul>
+                                            <textarea rows="10" cols="54"  placeholder="Product Details" style="max-width: 400px;max-height: 100px;">Premium suede and Force Brand's signature Formula 23 foam come together to give you an extra luxurious (and extra cosy) AF1. You don't need to play "either or" when it comes to choosing style or comfort with this one—which is nice, 'cause you deserve both.</textarea>
+                                            
+                                        </ul>
+                                        <div class="add-img" style="margin-top: 20px; max-width: 300px; max-height: 200px;">
+                                            <input type="file" accept="image/*" id="themsanphamkhungcon2" onchange="displayImage2(this)" required >  
+                                            <img id="previewImage2" src="product-detail/airforce/Nike Air Force 1 '07 Pro Tech-a.png" alt="Image here" style="width: 200px; height: 200px;">
+                                        </div>
+                                        <br>
+                                        <div id="delBtn2">
+                                            <button class="" type="button" onclick="deleteImg2('delBtn2','previewImage2')"style="width: 70px;">Delete</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div id="myModal3" class="modal3">
+                <div class="modal-content">
+                  <span class="close3">&times;</span>
+                  <div class="container-modal">
+                    <div class="add-page">
+                        <div class="add-product">
+                            <h2>Edit Product</h2>
+                            <form action="">
+                                <div class="dotgrid">
+                                    <div class="wrapper">
+                                        <div class="wrap">
+                                            <label>Product Name </label>
+                                            <input type="text" placeholder="Air Force 1 '07 EasyOn">
+                                        </div>
+                                        <div class="wrap">
+                                            <label>ID Product </label>
+                                            <input type="text" placeholder="123456" style="margin-left: 40px;">
+                                        </div>
+                                        <div class="wrap">
+                                            <label >Category</label>
+                                            <select  style="margin-left: 54px;font-size: 20px;">
+                                                <option value="1"selected="selected">Air Force</option>
+                                                <option value="2">Basketball</option>
+                                                <option value="3" >Jordan</option>
+                                                <option value="4">Others</option>
+                                            </select>
+                                        </div>
+                                        <div class="wrap">
+                                            <label >Shoes Top</label>
+                                            <select style="margin-left: 41px;font-size: 20px;" >
+                                                <option value="1">High Top</option>
+                                                <option value="2">Mid Top</option>
+                                                <option value="3" selected="selected">Low Top</option>
+                                            </select>
+                                        </div>
+                                        <div class="wrap">
+                                            <label>Cost</label>
+                                            <input type="text" placeholder="$192.50" style="margin-left: 95px;">
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <div class="add-btn">
+                                    <button onclick="alert('Save Success')" style="text-align: center;width: 200px;font-size: 25px;font-weight: 600; color: #f1f2f6;background-color:#212121;border-radius: 5px;">Save</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="checkout-products has-bg">
+                            <div class="order-summary">
+                                <div class="wrapper">
+                                    <h2>Product Details:</h2>
+                                    <div class="product-list">
+                                        <ul>
+                                            <textarea rows="10" cols="54"  placeholder="Product Details" style="max-width: 400px;max-height: 100px;">Premium suede and Jordan Brand's signature Formula 23 foam come together to give you an extra luxurious (and extra cosy) AJ1. You don't need to play "either or" when it comes to choosing style or comfort with this one—which is nice, 'cause you deserve both.</textarea>
+                                            
+                                        </ul>
+                                        <div class="add-img" style="margin-top: 20px; max-width: 300px; max-height: 200px;">
+                                            <input type="file" accept="image/*" id="themsanphamkhungcon2" onchange="displayImage3(this)" required >  
+                                            <img id="previewImage3" src="product-detail/airforce/Nike Air Force 1 '07 EasyOn-a.png" alt="Image here" style="width: 200px; height: 200px;">
+                                        </div>
+                                        <br>
+                                        <div id="delBtn3" >
+                                            <button class="" type="button" onclick="deleteImg3('delBtn3','previewImage3')"style="width: 70px;">Delete</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            
+        
+
+
+                
+                
+                
+                
+                
+
+                <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>    
+    <script src="js/modal.js"></script>
+</body>
+
+</html>

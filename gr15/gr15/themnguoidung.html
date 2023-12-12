@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Add User</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="css/styleTLWeb1.css">
+    <link rel="stylesheet" href="css/product2.css">
+    <link rel="stylesheet" href="css/themsanpham.css">
+    <link rel="stylesheet" href="css/style-admin.css">
+    <script>
+        function displayImage(input) {
+          var file = input.files[0];
+          if (file) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+              document.getElementById('previewImage').src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+          }
+        }
+      </script>
+</head>
+
+<body>
+  <div>
+		<div class="container" style="border: 5px solid #212121 ; border-radius: 10px;margin-top: 80px; margin-bottom: 50px;">
+		<div class="themsanphamrow">
+            <div class="themsanphamkhung1">
+                <div class="themsanphamtext1" style="margin-left: 30px;">Add User:</div>
+                <div style="margin-left: 200px;">
+                    
+                    <input type="themsanphamkhungcon" placeholder="Full Name:" required>
+                    <input type="themsanphamkhungcon" placeholder="Account:" required>
+                    <input type="themsanphamkhungcon" placeholder="Password:" required>
+                    <input type="themsanphamkhungcon" placeholder="Gmail:" required>
+                    <input type="themsanphamkhungcon" placeholder="Phone Number:" required>
+                    <br>
+                    <div class="Add">
+                      <tr>
+                          <a style="text-align: left;" ><button  onclick="alert('Add Success')" class="add" type="button" onclick="toggleButtons()" > <span style="font-size: large;">Add User</span></button></a>
+                      </tr>
+                    </div>
+                </div>
+                
+            </div>
+                <div style="margin-left: 80px;">
+                <textarea rows="15" cols="67"  placeholder="More information: " style="margin-top: 78px;"></textarea>
+                    <input type="file" accept="image/*" id="themsanphamkhungcon2" onchange="displayImage(this)" required>
+                    <img id="previewImage" src="#" alt="Image here:" style="max-width: 200px; max-height: 200px;">
+                    <br>
+                </div>
+              <div> 
+            </div>
+  </div>
+     <a href="quanlitaikhoan.html"><button class="status3" type="button" style="padding: 10px 15px; margin: 8px 2px; font-size: larger;">Back</button></a> 
+  <div> 
+  </div>  
+</body>
+
+</html>

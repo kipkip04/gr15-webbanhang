@@ -1,0 +1,90 @@
+.modal,
+.modal1,
+.modal2,
+.modal3 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 75%;
+    height: auto;
+    border: 5px solid #f1f2f6;
+    max-height: auto;
+  }
+  
+  /* The Close Button */
+  .close,
+  .close1,
+  .close2,
+  .close3 {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus,
+  .close1:hover,
+  .close1:focus,
+  .close2:hover,
+  .close2:focus, 
+  .close3:hover,
+  .close3:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+.add-page {
+    position: relative;
+    margin: 0 -15px;
+    padding: 40px 15px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.add-page h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.add-page .add-product {
+    padding-bottom: 40px;
+}
+.add-page form > div,
+.add-page form > div input ~ input {
+    margin-top: 20px;
+}
+.add-page form > div label {
+    display: inline-block;
+    margin: 0 0 5px;
+    font-size: 20px;
+}
+.add-page .product-list li {
+    min-height: 120px;
+}
+.dotgrid .wrapper div {
+    margin-top: 10px;
+}
+.dotgrid .wrapper .wrap {
+    font-size: 40px;
+    font-weight: 600;
+}
+.dotgrid .wrapper .wrap input {
+    margin-left: 10px;
+    font-size: 20px;
+}

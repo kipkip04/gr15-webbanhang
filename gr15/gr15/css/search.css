@@ -1,0 +1,75 @@
+
+.list-inline .button {
+    border-style: none;
+    background-color: var(--flashwhite-color);
+    font-size: 24px;
+}
+form.search {
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+.searchextend {
+  margin: 20px; 
+  padding: 15px;
+  background-color: #f5f5f5; 
+  border: 1px solid #ddd;
+  border-radius: 10px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+label {
+  font-weight: bold;
+  display: center;
+  margin-bottom: 5px;
+}
+/* button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+} */
+button:hover {
+  background-color: var(--primary-color);
+}
+button {
+  cursor: pointer;
+  border: none;
+  padding: 0;
+}
+.custom-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 140px;
+  cursor: pointer;
+  border-radius: 50px;
+  width: 300px;
+}
+.custom-button:hover {
+    background-color: var(--primary-color);
+}
+.widget .price-range
+{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+/* .search {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  display: center;
+  justify-content: space-between;
+} */

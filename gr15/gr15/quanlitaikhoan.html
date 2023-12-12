@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>account information</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="css/style-admin.css">
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <img src="" alt="">
+                        </span>       
+                    </a>
+                </li>
+                <li>
+                    <a href="admin.html">
+                        <span class="icon">
+                            <ion-icon name="storefront-outline"></ion-icon>
+                        </span>
+                       
+                        <h3 class="title" >Home Page</h3>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Customer.html">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <h3 class="title">Customer</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="quanlisanpham.html">
+                        <span class="icon">
+                            <ion-icon name="shirt-outline"></ion-icon>
+                        </span>
+                        <h3 class="title">Product Management</h3>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="quanlidonhang.html">
+                        <span class="icon">
+                            <ion-icon name="cart-outline"></ion-icon>
+                        </span>
+                        <h3 class="title">Order management</h3>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                        </span>
+                        <h3 class="title">Account management</h3>
+                    </a>
+                </li>   
+
+                <li>
+                    <a href="thongke.html">
+                        <span class="icon">
+                            <ion-icon name="trending-up-outline"></ion-icon>
+                        </span>
+                        <h3 class="title">Statistical</h3>
+                    </a>
+                </li>
+                
+            </ul>
+           
+           
+        </div>
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+                <div class="user">
+                    <img src="img/admin.jpg" alt="">
+                </div> 
+            </div>
+
+            <!-- ================ Order Details List ================= -->
+            <div class="details">
+                <div class="recentOrders2">
+                    <div class="cardHeader">
+                        <h2>account information
+                        </h2>
+                    </div>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Full Name</td>
+                                <td>Account</td>
+                                <td>Password</td>
+                                <td>Gmail</td>
+                                <td>Phone Number</td>
+                                <td>Administrator action</td>
+                                <td>Status Account</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <style>
+        .password-container {
+            position: relative;
+        }
+
+        .toggle-password {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+    </style>
+                            <script>
+        function togglePassword(passwordId, eyeIconId) {
+        var passwordField = document.getElementById(passwordId);
+        var eyeIcon = document.getElementById(eyeIconId);
+
+        if (passwordField.type === "password") {
+            passwordField.type = "text";
+            eyeIcon.innerHTML = "👁️";
+        } else {
+            passwordField.type = "password";
+            eyeIcon.innerHTML = "👁️";
+        }
+    }
+        function khoataikhoan(lockId, unlockId){
+            var lockField = document.getElementById(lockId);
+            if (lockField.type === "button"){
+                alert("Are you sure you want to block your account?")
+                document.getElementById(lockId).style.color="white";
+                document.getElementById(lockId).style.backgroundColor="red";
+                document.getElementById(unlockId).style.color="orange";
+                document.getElementById(unlockId).style.backgroundColor="white";
+            }
+        }
+        function mokhoataikhoan(lockId, unlockId){
+            var unlockField = document.getElementById(unlockId);
+            if(unlockField.type==="button"){
+                alert("Are you sure you want to unlock your account?")
+                document.getElementById(lockId).style.color="orange";
+                document.getElementById(lockId).style.backgroundColor="white";
+                document.getElementById(unlockId).style.color="white";
+                document.getElementById(unlockId).style.backgroundColor="orange";
+            }
+        }
+
+    </script>
+                            <tr>
+                                <td>Hưng Tam Mao</td>
+                                <td>HungTamMaok22</td>
+                                <td>   <div class="password-container">
+                                    <input type="password" id="password1" name="password" value="TamMaoToc" readonly>
+
+        
+                                    <span class="toggle-password" onclick="togglePassword('password1','eyeIcon1')">👁️</span>
+                                </div>
+                            
+                            </td>
+                                <td>HTMsgu123@gmail.com </td>
+                                <td>0987654321  </td>
+                                <td><a href="chinhsuatk.html"><button class="edit" type="button" onclick="toggleButtons()">Update</button></a>
+                                    <button class="status1 inProgress" type="button" onclick="alert('Do you want delete account ?'); alert('Delete success')"><span>Delete</span></button></td>
+                                <td><button id="checkLock" class="status2 inProgress" type="button" onclick="khoataikhoan('checkLock', 'checkLock1')"><span>Block</span></button>
+                                    <button id="checkLock1" class="status2 inProgress" type="button" style="color: white; background-color: orange;" onclick="mokhoataikhoan('checkLock','checkLock1')"><span>Unblock</span></button>
+                                </td>
+                                <tr>
+                                    <td>Anh Dân Quân</td>
+                                    <td>Anhdanquank22</td>
+                                    <td>   <div class="password-container">
+                                        <input type="password" id="password2" name="password" value="QuanDanTuVe" readonly>
+
+            
+                                        <span class="toggle-password" onclick="togglePassword('password2','eyeIcon1')">👁️</span>
+                                    </div>
+                                
+                                </td>
+                                    <td>ADQsgu123@gmail.com </td>
+                                    <td>0123456789  </td>
+                                    <td><a href="chinhsuatk.html"><button class="edit" type="button" onclick="toggleButtons()">Update</button></a>
+                                        <button class="status1 inProgress" type="button" onclick="alert('Do you want delete account ?'); alert('Delete success')"><span>Delete</span></button></td>
+                                    <td><button id="checkLock3" class="status2 inProgress" type="button" onclick="khoataikhoan('checkLock3', 'checkLock2')"><span>Block</span></button>
+                                        <button id="checkLock2" class="status2 inProgress" type="button" style="color: white; background-color: orange;" onclick="mokhoataikhoan('checkLock3','checkLock2')"><span>Unblock</span></button>
+                                    </td>
+                                <tr>
+                                    <td>Huy Đom Đóm</td>
+                                    <td>HuyDomDomk22</td>
+                                    <td>   <div class="password-container">
+                                        <input type="password" id="password3" name="password" value="5trieudomdom" readonly>
+
+            
+                                        <span class="toggle-password" onclick="togglePassword('password3','eyeIcon1')">👁️</span>
+                                    </div>
+                                
+                                </td>
+                                    <td>HDDsgu123@gmail.com </td>
+                                    <td>0364655945</td>
+                                    <td><a href="chinhsuatk.html"><button class="edit" type="button" onclick="toggleButtons()">Update</button></a>
+                                        <button class="status1 inProgress" type="button" onclick="alert('Do you want delete account ?'); alert('Delete success')"><span>Delete</span></button></td>
+                                    <td><button id="checkLock4" class="status2 inProgress" type="button" onclick="khoataikhoan('checkLock4', 'checkLock5')"><span>Block</span></button>
+                                        <button id="checkLock5" class="status2 inProgress" type="button" style="color: white; background-color: orange;" onclick="mokhoataikhoan('checkLock4','checkLock5')"><span>Unblock</span></button>
+                                    </td>
+ 
+                            
+                                
+                                    
+                            </table>
+                            <div class="Add">
+                                <tr>
+                                    <a style="text-align: left;" href="themnguoidung.html"><button  class="add" type="button" onclick="toggleButtons()" > <span style="font-size: large; color: #f5f5f5;">Add User</span></button></a>
+                                </tr>
+                            </div>      
+
+                                                                                                                         
+                                                            
+                                                            
+</body>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</html> 

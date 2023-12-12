@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business statistics</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="css/style-admin.css">
+    <script>
+        function thongKe() {
+            var productName = document.getElementById('productName').value;
+            var productType = document.getElementById('productType').value;
+            var timePeriod = document.getElementById('timePeriod').value;
+            var resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = '<h2>Statistical results</h2> <br>' +
+                '<p>Product Name: ' + productName + '</p> <br> ' +
+                '<p>Product Type: ' + productType + '</p> <br>' +
+                '<p>Period : ' + timePeriod + '</p> <br>' +
+                '<p>Total quantity: ' + tinhTongSoLuong() + '</p> <br>' +
+                '<h3>Oder</h3> <br>' +
+                hienThiDonHang();   
+        }
+
+        function tinhTongSoLuong() {
+            // Đoạn code tính tổng số lượng từ đơn hàng
+            var productType = document.getElementById('productType').value;
+            if(productType == 'Air Jordan 1')
+            {
+                var ordersData = getOrders_jordanData(); // Replace this with your actual data retrieval logic
+                var totalQuantity = 0;
+                for (var i = 0; i < ordersData.length; i++) {
+                    totalQuantity += ordersData[i].quantity;
+                }
+                return totalQuantity;
+            }
+            else if (productType == 'Air Force 1')
+            {
+                var ordersData = getOrders_ForceData(); // Replace this with your actual data retrieval logic
+                var totalQuantity = 0;
+                for (var i = 0; i < ordersData.length; i++) {
+                    totalQuantity += ordersData[i].quantity;
+                }
+                return totalQuantity;
+            }
+            else if (productType == 'BasketBall')
+            {
+                var ordersData = getOrders_BasketballData(); // Replace this with your actual data retrieval logic
+                var totalQuantity = 0;
+                for (var i = 0; i < ordersData.length; i++) {
+                    totalQuantity += ordersData[i].quantity;
+                }
+                return totalQuantity;
+            }
+        }
+
+        function hienThiDonHang() {
+            // Đoạn code hiển thị thông tin đơn hàng
+            var productType = document.getElementById('productType').value;
+            if(productType =='Air Jordan 1'){
+                var ordersData = getOrders_jordanData(); // Replace this with your actual data retrieval logic
+                var ordersHtml = '<ul>';
+                for (var i = 0; i < ordersData.length; i++) {
+                    ordersHtml += '<li>';
+                    ordersHtml += 'Order #' + ordersData[i].id + ': ' +
+                        'Product: ' + ordersData[i].productName +
+                        ', Quantity: ' + ordersData[i].quantity +
+                        ', Order date: ' + ordersData[i].orderDate;
+                    ordersHtml += '</li>';
+                    ordersHtml += '<br>';
+                }
+                ordersHtml += '</ul>';
+                return ordersHtml;
+            }
+            if(productType =='Air Force 1')
+            {
+                var ordersData = getOrders_ForceData(); // Replace this with your actual data retrieval logic
+                var ordersHtml = '<ul>';
+                for (var i = 0; i < ordersData.length; i++) {
+                    ordersHtml += '<li>';
+                    ordersHtml += 'Order #' + ordersData[i].id + ': ' +
+                        'Product: ' + ordersData[i].productName +
+                        ', Quantity: ' + ordersData[i].quantity +
+                        ', Order date: ' + ordersData[i].orderDate;
+                    ordersHtml += '</li>';
+                    ordersHtml += '<br>';
+                }
+                ordersHtml += '</ul>';
+                return ordersHtml;
+            }
+            if(productType =='BasketBall')
+            {
+                var ordersData = getOrders_BasketballData(); // Replace this with your actual data retrieval logic
+                var ordersHtml = '<ul>';
+                for (var i = 0; i < ordersData.length; i++) {
+                    ordersHtml += '<li>';
+                    ordersHtml += 'Order #' + ordersData[i].id + ': ' +
+                        'Product: ' + ordersData[i].productName +
+                        ', Quantity: ' + ordersData[i].quantity +
+                        ', Order date: ' + ordersData[i].orderDate;
+                    ordersHtml += '</li>';
+                    ordersHtml += '<br>';
+                }
+                ordersHtml += '</ul>';
+                return ordersHtml;
+            }
+        }
+
+        // Dummy function to simulate fetching orders data
+        function getOrders_jordanData() {
+            return [
+                { id: 31231241, productName: 'Air Jordan 1 G High', quantity: 3, orderDate: '2023-06-12' },
+                { id: 31231239, productName: 'Air Jordan 1 Zoom CMFT 2', quantity: 6, orderDate: '2023-01-12' },
+                { id: 31231240, productName: 'Air Jordan 1 Low G NRG', quantity: 4, orderDate: '2023-02-22' },
+                { id: 31231232, productName: 'Air Jordan 1 Low SE Gold', quantity: 7, orderDate: '2023-04-12' },
+                { id: 31231242, productName: 'Jordan Nu Retro 1 Low', quantity: 2, orderDate: '2023-05-17' },
+                // Add more orders as needed
+            ];
+        }
+        function getOrders_ForceData() {
+            return [
+                { id: 31231242, productName: 'Nike Air Force 1 LV8', quantity: 13, orderDate: '2023-07-15' },
+                { id: 31231212, productName: 'Nike Air Force 1 EasyOn', quantity: 22, orderDate: '2023-01-12' },
+                { id: 31231223, productName: 'Nike Air Force 1 Mid Evo', quantity: 16, orderDate: '2023-01-02' },
+                { id: 31231214, productName: 'Nike Air Force 1 Shadow', quantity: 27, orderDate: '2023-05-12' },
+                { id: 31231251, productName: 'Nike Air Force 1 Pink', quantity: 14, orderDate: '2023-05-22' },
+                // Add more orders as needed
+            ];
+        }
+        function getOrders_BasketballData() {
+            return [
+                { id: 31231241, productName: 'Air Jordan XXXVIII Celebration PF', quantity: 33, orderDate: '2023-01-02' },
+                { id: 31231241, productName: 'Air Jordan Legacy 312 Low', quantity: 23, orderDate: '2023-01-02' },
+                { id: 31231241, productName: 'Jordan Stay Loyal 2', quantity: 13, orderDate: '2023-01-02' },
+                { id: 31231241, productName: 'Jordan Stay Loyal 3', quantity: 43, orderDate: '2023-01-02' },
+                { id: 31231241, productName: 'Luka 2 Lake Bled', quantity: 53, orderDate: '2023-01-02' },
+                // Add more orders as needed
+            ];
+        }
+    </script>
+          <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+          <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <img src="" alt="">
+                        </span>       
+                    </a>
+                </li>
+                <li>
+                    <a href="admin.html">
+                        <span class="icon">
+                            <ion-icon name="storefront-outline"></ion-icon>
+                        </span>
+                       
+                        <h3 class="title" >Home Page</h3>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Customer.html">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <h3 class="title">Customer</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="quanlisanpham.html">
+                        <span class="icon">
+                            <ion-icon name="shirt-outline"></ion-icon>
+                        </span>
+                        <h3 class="title">Product Management</h3>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="quanlidonhang.html">
+                        <span class="icon">
+                            <ion-icon name="cart-outline"></ion-icon>
+                        </span>
+                        <h3 class="title">Order management</h3>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="quanlitaikhoan.html">
+                        <span class="icon">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                        </span>
+                        <h3 class="title">Account management</h3>
+                    </a>
+                </li>   
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="trending-up-outline"></ion-icon>
+                        </span>
+                        <h3 class="title">Statistical</h3>
+                    </a>
+                </li>
+                
+            </ul>
+           
+           
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+                <div class="user">
+                    <img src="img/admin.jpg" alt="">
+                </div> 
+            </div>
+
+            <!-- ================ Order Details List ================= -->
+            <div class="container1">
+                <h1 style="color: #2bcbba;margin-left: 240px;">Business statistics</h1>
+            
+                <div>
+                  <label for="productName">Product Name:</label>
+                  <input type="text" id="productName" placeholder="Product Name">
+                </div>
+                <div>
+                  <label for="productType">Category Product:</label>
+                  <select id="productType">
+                    <option value="Product type has not been selected. Please select again">[None]</option>
+                    <option value="Air Jordan 1">Air Jordan 1</option>
+                    <option value="Air Force 1">Air Force 1</option>
+                    <option value="BasketBall">BasketBall</option>
+                 </select>
+                </div> 
+                <div>
+                    
+                  <label for="timePeriod">Period:</label> <br>
+                  <input type="text" id="timePeriod" placeholder="Ex 2022, 2023">
+                </div>
+            
+                <button onclick="thongKe()">Statistic</button>
+                <div id="result">
+                </div>
+              </div>
+              <style>
+            
+            .container1 {
+              max-width: 800px;
+              margin: 100px auto;
+              padding: 20px;
+              background-color: #f1f2f6;
+              border-radius: 5px;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            
+            
+            input {
+              width: 100%;
+              padding: 8px;
+              margin-bottom: 10px;
+            }
+            h1 {
+            margin-left: 150px;
+                }
+            button {
+              background-color: gray;
+              color: #fff;
+              padding: 10px;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+            }
+            select { 
+                width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            font-size: 15px; 
+            color: #333; 
+            }
+            
+            #result {
+              margin-top: 30px;
+            }
+            </style>
+</body>
+</html>

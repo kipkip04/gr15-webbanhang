@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="css/style-admin.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.6.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+    <script>
+        function LogOut(){
+            localStorage.clear();
+        }
+    </script>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                
+                <li>
+                    <a >
+                        <span class="icon">
+                            <img src="" alt="">
+                        </span>       
+                    </a>
+                </li>
+                <li>
+                    <a >
+                        <span class="icon">
+                            <ion-icon name="storefront-outline"></ion-icon>
+                        </span>
+                       
+                        <h3 class="title" >Home Page</h3>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Customer.html">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <h3 class="title">Customer</h3>
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="quanlisanpham.html">
+                        <span class="icon">
+                            <ion-icon name="shirt-outline"></ion-icon>
+                        </span>
+                        <h3 class="title">Product Management</h3>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="quanlidonhang.html">
+                        <span class="icon">
+                            <ion-icon name="cart-outline"></ion-icon>
+                        </span>
+                        <h3 class="title">Order management</h3>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="quanlitaikhoan.html">
+                        <span class="icon">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                        </span>
+                        <h3 class="title">Account management</h3>
+                    </a>
+                </li>   
+
+                <li>
+                    <a href="thongke.html">
+                        <span class="icon">
+                            <ion-icon name="trending-up-outline"></ion-icon>
+                        </span>
+                        <h3 class="title">Statistical</h3>
+                    </a>
+                </li>
+                
+            </ul>
+           
+           
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>  
+                <div class="user">
+                    <img src="img/admin.jpg" alt="">
+                </div> 
+            </div>
+
+            <!-- ======================= Cards ================== -->
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">15.072.004</div>
+                        <h2 class="cardName">Views</h2>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">2.004</div>
+                        <h2 class="cardName">Sales</h2>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="cart-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">1.507</div>
+                        <h2 class="cardName">Comment</h2>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="chatbubbles-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">$1.572.004</div>
+                        <h2 class="cardName">Revenue</h2>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="cash-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================ Order Details List ================= -->
+            <div class="details">
+                <div class="recentOrders">
+                    <div class="cardHeader">
+                        <h2>Ordered recently</h2>
+                        <h3><a  class="btn">View All</a></h3>
+                    </div>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <td><h3>Products</h3></td>
+                                <td><h3>Cost</h3></td>
+                                <td><h3>Pay</h3></td>
+                                <td><h3>Status</h3></td>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td><h5>Air Jordan 1 Elevate High</h5> </td>
+                                <td><h5>$180.00</h5> </td>
+                                <td><h5>Cash</h5> </td>
+                                <td><span class="status inProgress"><i class="ri-check-line"></i></span></td>
+                            </tr>
+
+                            <tr>
+                                <td><h5>Air Jordan 1 G High</h5> </td>
+                                <td><h5>$230.50</h5> </td>
+                                <td><h5>Online</h5> </td>
+                                <td><span class="status pending"><i class="ri-exchange-dollar-line"></i></span></td>
+                            </tr>
+
+                            <tr>
+                                <td><h5>Air Jordan 1 Zoom CMFT 2</h5> </td>
+                                <td><h5>$192.50</h5> </td>
+                                <td><h5>Online</h5> </td>
+                                <td><span class="status return"><i class="ri-pause-line"></i></span></td>
+                            </tr>
+                            <tr>
+                                <td><h5>Nike Air Force 1 LV8</h5> </td>
+                                <td><h5>$200.50</h5> </td>
+                                <td><h5>Cash</h5> </td>
+                                <td><span class="status inProgress"><i class="ri-check-line"></i></span></td>
+                            </tr>
+
+                            <tr>
+                                <td><h5>Nike Air Force 1 High '07</h5> </td>
+                                <td><h5>$300.50</h5> </td>
+                                <td><h5>Cash</h5> </td>
+                                <td><span class="status return"><i class="ri-pause-line"></i></span></td>
+                            </tr>
+
+                            <tr>
+                                <td><h5>Nike Air Force 1 '07 Pro</h5> </td>
+                                <td><h5>$292.50</h5> </td>
+                                <td><h5>Online</h5> </td>
+                                <td><span class="status pending"><i class="ri-exchange-dollar-line"></i></span></td>
+                            </tr>
+                            <tr>
+                                <td><h5>Air Jordan XXXVIII 'Celebration' PF</h5> </td>
+                                <td><h5>$300.50</h5> </td>
+                                <td><h5>Cash</h5> </td>
+                                <td><span class="status pending"><i class="ri-exchange-dollar-line"></i></span></td>
+                            </tr>
+
+                            <tr>
+                                <td><h5>Air Jordan XXXVIII 'FIBA' PF</h5> </td>
+                                <td><h5>$275.50</h5> </td>
+                                <td><h5>Online</h5> </td>
+                                <td><span class="status inProgress"><i class="ri-check-line"></i></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- ================= New Customers ================ -->
+                <div class="recentCustomers">
+                    <div class="cardHeader">
+                        <h2>Recent customers</h2>
+                    </div>
+
+                    <table>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="img/Q8B.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Quân 8 pool ball<br> <span>Việt Nam</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="img/ADQ.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Anh Dân Quân<br> <span>Việt Nam</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="img/LDA.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Lê Đức "Em"<br> <span>Việt Nam</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="img/Hieu.jpg   " alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Hiếu Út Khờ<br> <span>Việt Nam</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="img/HTM.png" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Hưng Tam Mao <br> <span>Việt Nam </span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="img/TTH.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Tài Trung Hoa <br> <span>Việt Nam</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="img/Huy.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Huy Đom Đóm<br> <span>Việt Nam</span></h4>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="img/ZCT.png" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Ziệt Cờ Tướng<br> <span>Việt Nam</span></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="img/Trieu.jpg" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Triều Sông Nước<br> <span>Việt Nam</span></h4>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <!-- <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> -->
+</body>
+
+</html>
